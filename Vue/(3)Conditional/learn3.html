@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 class="error">{{ score }}分</h1>
+        <div v-show="score">
+            <p v-if="score >= 100">大於!</p>
+            <p v-else>小於!</p>
+        </div>
+        <p>輸入一個數字判斷是否大於100</p>
+        <input type="text" v-model="score">
+    </div>
+    <script>
+    new Vue({
+        el: '#app',
+        data: {
+            score: '0'
+        }
+    });
+    </script>
+</body>
+
+</html>
